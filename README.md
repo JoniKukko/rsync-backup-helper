@@ -15,13 +15,13 @@ Scriptiä on ajettu vain Ubuntu 14.04 LTS järjestelmässä, mutta se toiminee m
 
 
 ## KÄYTTÖÖNOTTO
-1) Scripti tarvitsee kansiot flag, log ja symlink.
-2) Kansioihin flag ja log on scriptiä ajavalla käyttäjällä oltava kirjoitusoikeudet.
-3) Kansioiden on oltava samassa sijainnissa scriptin kanssa.
-4) Scripti tarvitsee tiedoston rsync.pass 
-5) rsync.pass tiedoston on oltava samassa sijainnisssa scriptin kanssa.
-6) rsync.pass tiedostoon laitetaan kohdepalvelimen salasana. Katso scriptin rivi 80.
-7) rsync.pass tiedoston tulee olla oikeuksiltaan vain scriptiä ajavan käyttäjän luettavissa ja muokattavissa.
+1. Scripti tarvitsee kansiot flag, log ja symlink.
+2. Kansioihin flag ja log on scriptiä ajavalla käyttäjällä oltava kirjoitusoikeudet.
+3. Kansioiden on oltava samassa sijainnissa scriptin kanssa.
+4. Scripti tarvitsee tiedoston rsync.pass 
+5. rsync.pass tiedoston on oltava samassa sijainnisssa scriptin kanssa.
+6. rsync.pass tiedostoon laitetaan kohdepalvelimen salasana. Katso scriptin rivi 80.
+7. rsync.pass tiedoston tulee olla oikeuksiltaan vain scriptiä ajavan käyttäjän luettavissa ja muokattavissa.
 
 
 ## KANSIORAKENNE
