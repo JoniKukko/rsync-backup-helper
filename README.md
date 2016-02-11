@@ -30,7 +30,7 @@ Scriptiä on ajettu vain Ubuntu 14.04 LTS järjestelmässä, mutta se toiminee m
 * ./symlink
 * ./BackupHelper.sh
 * ./rsync.pass
-* ./readme.txt
+* ./README.md
 
 
 ## KÄYTTÖ
