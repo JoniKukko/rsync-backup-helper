@@ -1,10 +1,6 @@
-# Rsync Backup Helper
-* BackupHelper v0.2
-* Joni Kukko
-* joni.kukko@outlook.com
+# Rsync Backup Helper v0.2
+Simple script that launches rsync only when there is a file or folder changes in the source location. This script also supports basic versioning and multiple target locations via "flags".
 
-
-## KUVAUS
 Scriptin tarkoitus on käynnistää rsync vain jos lähdekansiorakenteessa on muutoksia.
 
 Tällä pyritään siihen, ettei rsyncin kohteena oleva nas-palvelin herätä kiintolevyjä turhaan, sillä rsync vertaa aina kohde- ja lähdekansioiden rakenteita keskenään vaikkei muutoksia lähdekansiossa olisikaan tapahtunut herättäennäin nas-palvelimen.
