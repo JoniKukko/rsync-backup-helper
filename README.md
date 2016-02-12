@@ -1,26 +1,24 @@
 # Rsync Backup Helper v0.2
-Simple script that launches rsync only when there is a file or folder changes in the source location. This script also supports basic versioning and multiple target locations via "flags".
+A simple script that launches rsync only when there are file or folder changes in the source location. This script also supports basic versioning and multiple target locations via "flags".
 
-Scriptin tarkoitus on käynnistää rsync vain jos lähdekansiorakenteessa on muutoksia.
-
-Tällä pyritään siihen, ettei rsyncin kohteena oleva nas-palvelin herätä kiintolevyjä turhaan, sillä rsync vertaa aina kohde- ja lähdekansioiden rakenteita keskenään vaikkei muutoksia lähdekansiossa olisikaan tapahtunut herättäennäin nas-palvelimen.
+This script was made because the default behavior of rsync is to compare source location to target locations. This might be inconvenient in some cases such as when target servers are trying to save power by hibernating their hard drives.
 
 
-## YHTEENSOPIVUUS
-Scriptiä on ajettu vain Ubuntu 14.04 LTS järjestelmässä, mutta se toiminee myös muissa linux pohjaisissa järjestelmissä.
+## COMPATIBILITY
+This script has only been run in Ubuntu 14.04 LTS system, but it should work on other Linux-based systems as well.
 
 
-## KÄYTTÖÖNOTTO
-1. Scripti tarvitsee kansiot flag, log ja symlink.
-2. Kansioihin flag ja log on scriptiä ajavalla käyttäjällä oltava kirjoitusoikeudet.
-3. Kansioiden on oltava samassa sijainnissa scriptin kanssa.
-4. Scripti tarvitsee tiedoston rsync.pass 
-5. rsync.pass tiedoston on oltava samassa sijainnisssa scriptin kanssa.
-6. rsync.pass tiedostoon laitetaan kohdepalvelimen salasana. Katso scriptin rivi 80.
-7. rsync.pass tiedoston tulee olla oikeuksiltaan vain scriptiä ajavan käyttäjän luettavissa ja muokattavissa.
+## INSTALLATION
+1. The script needs folders called flag, log and symlink.
+2. The user has to have write permissions to folders flag and log.
+3. Folders must be in the same location with the script.
+4. The script needs a file called rsync.pass
+5. rsync.pass file must be in the same location with the script.
+6. rsync.pass file includes the password for the target server. See line 80 of the script.
+7. rsync.pass file must be readable only by the same user that runs the script.
 
 
-## KANSIORAKENNE
+## FOLDER STRUCTURE
 * ./flag
 * ./log
 * ./symlink
@@ -29,7 +27,7 @@ Scriptiä on ajettu vain Ubuntu 14.04 LTS järjestelmässä, mutta se toiminee m
 * ./README.md
 
 
-## KÄYTTÖ
+## USAGE
 Symlink kansioon on tarkoitus kerätä symlinkein kaikki varmuuskopioitavat kansiot ja tiedostot.
 Ensin on tarkoitus ajaa komento check mikä tarkistaa onko paikallisessa kansiorakenteessa muutoksia. Muutoksia verrataan aikaisempaan check ajoon joten ensimmäinen check tuottaa aina falsen.
 
